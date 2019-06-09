@@ -1,3 +1,6 @@
+"""
+Classes for our AST nodes.
+"""
 class AST(object):
 	pass
 
@@ -225,7 +228,8 @@ class Lexer(object):
 
 
 """
-The parser class. Has a method for every grammar rule as describe in the project report.
+The parser class, which takes in a lexer in the constructor. 
+Has a method for every grammar rule as describe in the project report.
 """
 class Parser(object):
 	def __init__(self, lexer):
@@ -543,13 +547,6 @@ def main():
    		c := a * b / 2.5;
 	FIN.  {CMPS203}
 	"""
-	#while True:
-	#    try:
-	#    	text = input('calc> ')
-	#    except EOFError:
-	#        break
-	#    if not text:
-	#        continue
 
 	lexer = Lexer(texto)
 	parser = Parser(lexer)
